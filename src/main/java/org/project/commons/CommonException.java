@@ -4,8 +4,7 @@ import org.springframework.http.HttpStatus;
 
 import java.util.ResourceBundle;
 
-public class CommonException extends RuntimeException{
-
+public class CommonException extends RuntimeException {
     private HttpStatus status;
 
     protected final static ResourceBundle validations;
@@ -16,16 +15,16 @@ public class CommonException extends RuntimeException{
         errors = ResourceBundle.getBundle("messages.errors");
     }
 
-    public CommonException(String message, HttpStatus status){
+    public CommonException(String message, HttpStatus status) {
         super(message);
         this.status = status;
     }
 
-    public CommonException(String message){
+    public CommonException(String message) {
         this(message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    public HttpStatus getStatus(){
+    public HttpStatus getStatus() {
         return status;
     }
 }

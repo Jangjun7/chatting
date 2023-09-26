@@ -1,3 +1,6 @@
+server:
+  port: 3001
+
 spring:
   servlet:
     multipart: # 파일 업로드 설정
@@ -27,3 +30,9 @@ spring:
           type:
             descriptor:
               sql: trace
+
+# 파일 업로드 경로 설정
+file:
+  upload:
+    path: C:/uploads/
+    url: /uploads/
